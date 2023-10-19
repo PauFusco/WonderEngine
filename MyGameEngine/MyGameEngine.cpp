@@ -64,6 +64,9 @@ static void drawGrid(int grid_size, int grid_step) {
 }
 
 void MyGameEngine::render() {
+
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);            //Para hacer que se ponga en wireframe
+
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(camera.fov, camera.aspect, camera.zNear, camera.zFar);
